@@ -45,4 +45,16 @@ let autoPlayInterval = setInterval(() => {
 content.addEventListener('mouseover', () => clearInterval(autoPlayInterval));
 content.addEventListener('mouseleave', () => {
     autoPlayInterval = setInterval(() => depoisButton.click(), 5000);
-});
+}); 
+
+function addDotNavigation(dots) {
+    dots.forEach((dot, index) => {
+        dot.onclick = () => {
+            ativo = index;
+            SetSlider();
+            items[ativo].classList.add('ativo');
+        };
+    });
+}
+
+addDotNavigation(dots);
