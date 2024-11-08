@@ -41,7 +41,6 @@ let autoPlayInterval = setInterval(() => {
     depoisButton.click();
 }, 5000);
 
-// Pausar ao passar o mouse no slider
 content.addEventListener('mouseover', () => clearInterval(autoPlayInterval));
 content.addEventListener('mouseleave', () => {
     autoPlayInterval = setInterval(() => depoisButton.click(), 5000);
