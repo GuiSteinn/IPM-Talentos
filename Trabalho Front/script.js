@@ -10,14 +10,12 @@ let firstPosition = 0;
 let lastPosition = items.length - 1;
 let autoPlayInterval;
 
-// Função para mover o slider para um slide específico
 function moveToSlide(index) {
     ativo = index;
     SetSlider();
     items[ativo].classList.add('ativo');
 }
 
-// Função para atualizar a exibição do slider
 function SetSlider() {
     let itemOld = content.querySelector('.lista .item.ativo');
     itemOld.classList.remove('ativo');
@@ -29,13 +27,11 @@ function SetSlider() {
     indicador.querySelector('.numero').innerHTML = '0' + (ativo + 1);
 }
 
-// Função para atualizar o auto-play
 function updateAutoPlay() {
     clearInterval(autoPlayInterval);
     autoPlayInterval = setInterval(() => depoisButton.click(), 5000);
 }
 
-// Configurações dos botões de navegação
 antesButton.onclick = () => {
     ativo = ativo - 1 < firstPosition ? lastPosition : ativo - 1;
     moveToSlide(ativo);
@@ -46,12 +42,10 @@ depoisButton.onclick = () => {
     moveToSlide(ativo);
 };
 
-// Inicializa o auto-play e atualiza ao passar o mouse
 updateAutoPlay();
 content.addEventListener('mouseover', () => clearInterval(autoPlayInterval));
 content.addEventListener('mouseleave', updateAutoPlay);
 
-// Função para configurar a navegação pelos pontos (dots)
 function addDotNavigation(dots) {
     dots.forEach((dot, index) => {
         dot.onclick = () => moveToSlide(index);
