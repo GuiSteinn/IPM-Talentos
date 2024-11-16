@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerar Divs</title>
+    <style>
+        /* Estilo genérico para as divs geradas */
+        .generated-div {
+            width: 30px;
+            height: 30px;
+            background-color: lightblue;
+            border: 1px solid #000;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+            margin: 5px;
+        }
+    </style>
+    <script src="exe04.js" defer></script>
+</head>
+<body>
+    <div>
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" min="1">
+        <button id="gerar">Gerar</button>
+    </div>
+    <div id="container"></div>
+</body>
+</html>

@@ -19,6 +19,8 @@
 
         <label for="aluguel">Aluguel:</label>
         <input type="number" step="0.01" id="aluguel" name="aluguel">
+
+        <button type="submit" >Calcular</button>
     </form>
 
     <?php 
