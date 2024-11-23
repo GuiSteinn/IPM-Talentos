@@ -5,7 +5,7 @@ document.getElementById('gerar').addEventListener('click', () => {
 
     
     if (isNaN(quantidade) || quantidade <= 0) {
-        alert("Por favor, informe um número válido maior que zero.");
+        alert("informe um número válido maior que zero.");
         return;
     }
 
@@ -14,7 +14,7 @@ document.getElementById('gerar').addEventListener('click', () => {
     for (let i = 1; i <= quantidade; i++) {
         ultimoIndice++; 
         const div = document.createElement('div');
-        div.className = 'generated-div';
+        div.className = 'div-gerador';
         div.textContent = ultimoIndice;
         container.appendChild(div);
     }

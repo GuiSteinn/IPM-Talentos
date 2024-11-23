@@ -13,7 +13,7 @@ document.getElementById('gerar').addEventListener('click', () => {
     const corBorda = cores[randomIndex(cores)];
 
     const novaDiv = document.createElement('div');
-    novaDiv.className = 'random-div';
+    novaDiv.className = 'div-aleatoria';
     novaDiv.style.backgroundColor = corFundo;
     novaDiv.style.border = `2px solid ${corBorda}`;
 
